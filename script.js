@@ -2,12 +2,14 @@ const inputElem = document.getElementById("input-text");
 const button = document.getElementById("check-btn");
 const output = document.getElementById("output");
 
+button.addEventListener("click", showResult)
+
 function showResult(){
     const inputVal = inputElem.value;
-    if(inputVal == ""){
+    if(inputVal === ""){
         alert("Input a valid word")
     }else{
-        output.innerHTML = checker(inputVal)
+        checker(inputVal)
     }
 }
 
